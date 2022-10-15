@@ -1,0 +1,31 @@
+{
+   "author": "CHIDA (iam.yeongbin.jo@gmail.com)",
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+
+   },
+   "content_scripts": [ {
+      "js": [ "js/vapi-client.js", "js/utils.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "ko",
+   "description": "Automatically login to Mana, New, Book TOKI",
+   "homepage_url": "https://github.com/yeongbin-jo/toki-login",
+   "icons": {
+      "128": "images/autologin-128.png",
+      "48": "images/autologin-48.png",
+      "64": "images/autologin-64.png"
+   },
+  
+   "manifest_version": 3,
+   "name": "Toki Login",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "webRequest", "webRequestBlocking", "storage", "http://*/*", "https://*/*" ],
+   "short_name": "Toki Login",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0.0",
+   "web_accessible_resources": [ "manifest.json", "images/*.png", "images/*.jpg", "css/*.css", "auth.html", "js/*.js" ]
+}
